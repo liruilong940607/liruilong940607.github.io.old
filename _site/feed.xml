@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-08-02T20:51:18+08:00</updated><id>http://localhost:4000/</id><title type="html">Dalong’s Blog</title><subtitle>This is Ruilong Li's homepage.
+</subtitle><author><name>Ruilong Li</name></author><entry><title type="html">windows python &amp;amp; jupyter 安装简明教程</title><link href="http://localhost:4000/2018/01/05/python-jupyter-%E5%AE%89%E8%A3%85%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.html" rel="alternate" type="text/html" title="windows python &amp; jupyter 安装简明教程" /><published>2018-01-05T00:00:00+08:00</published><updated>2018-01-05T00:00:00+08:00</updated><id>http://localhost:4000/2018/01/05/python-jupyter-%E5%AE%89%E8%A3%85%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B</id><content type="html" xml:base="http://localhost:4000/2018/01/05/python-jupyter-%E5%AE%89%E8%A3%85%E7%AE%80%E6%98%8E%E6%95%99%E7%A8%8B.html">&lt;h3 id=&quot;1-python-安装&quot;&gt;1. python 安装&lt;/h3&gt;
+
+&lt;p&gt;（已完成，跳过）&lt;/p&gt;
+
+&lt;h3 id=&quot;2-setuptools-安装pip安装的前提&quot;&gt;2. setuptools 安装（pip安装的前提）&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载地址：https://pypi.python.org/packages/f4/21/9990132a250d49190c2fb41ea2adb9b4693c0b10ec1b92db476d3f06e6cb/setuptools-38.3.0.zip#md5=ea9a655779971d3904d88f067b7b830e&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;解压，用cmd控制台进入解压目录，输入&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python setup.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-pip-安装python的包管理工具&quot;&gt;3. pip 安装（python的包管理工具）&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;先确认是否已安装pip： 进入命令行cmd， 输入pip。如果得到以下提示，则需要安装pip。
+&lt;img src=&quot;http://static.zybuluo.com/lrl940607/bmh3x2e5ouhin9p6a71fgvfg/Screen%20Shot%202018-01-05%20at%205.41.21%20PM.png&quot; alt=&quot;Screen Shot 2018-01-05 at 5.41.21 PM.png-67.7kB&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载地址：https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;下载完成之后，解压到一个文件夹，用cmd控制台进入解压目录，输入：
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python setup.py install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;安装完成后, 要在系统环境变量&lt;code class=&quot;highlighter-rouge&quot;&gt;Path&lt;/code&gt;里添加以下路径。
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:\Python27\Scripts;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;如图：
+&lt;img src=&quot;http://static.zybuluo.com/lrl940607/je55s7njrgyukcy1vgymfmb1/image.png&quot; alt=&quot;image.png-253.3kB&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;4-安装依赖&quot;&gt;4. 安装依赖&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装VC 9.0（词云依赖）: 下载之后双击安装
+下载地址：https://www.microsoft.com/en-us/download/confirmation.aspx?id=44266&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装作业1所需的python包
+进入cmd, 进入&lt;code class=&quot;highlighter-rouge&quot;&gt;requirements.txt&lt;/code&gt;文件所在目录&lt;/p&gt;
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;5-完成运行jupyter本地服务&quot;&gt;5. 完成。运行jupyter本地服务。&lt;/h3&gt;
+&lt;p&gt;cmd进入作业1文件所在目录。输入：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jupyter notebook
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;弹出网页即成功。&lt;/p&gt;
+
+&lt;h3 id=&quot;6-最后一件事打开hw1ipynb后修改里面的字体路径为cwindowsfontssimsunttc&quot;&gt;6. 最后一件事。打开hw1.ipynb后，修改里面的字体路径为&lt;code class=&quot;highlighter-rouge&quot;&gt;C:\Windows\Fonts\SIMSUN.TTC&lt;/code&gt;：&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/lrl940607/vyh3d5lbt91gjj52fxookb5v/image.png&quot; alt=&quot;image.png-210.7kB&quot; /&gt;&lt;/p&gt;</content><author><name>Ruilong Li</name></author><category term="tutorial" /><summary type="html">1. python 安装</summary></entry><entry><title type="html">PyQt5的安装（Mac版）</title><link href="http://localhost:4000/2017/09/01/PyQt5%E7%9A%84%E5%AE%89%E8%A3%85-Mac%E7%89%88.html" rel="alternate" type="text/html" title="PyQt5的安装（Mac版）" /><published>2017-09-01T00:00:00+08:00</published><updated>2017-09-01T00:00:00+08:00</updated><id>http://localhost:4000/2017/09/01/PyQt5%E7%9A%84%E5%AE%89%E8%A3%85(Mac%E7%89%88)</id><content type="html" xml:base="http://localhost:4000/2017/09/01/PyQt5%E7%9A%84%E5%AE%89%E8%A3%85-Mac%E7%89%88.html">&lt;p&gt;python2:&lt;/p&gt;
+
+&lt;p&gt;由于pip的pyqt5只支持python3+，所以此处要从源码编译。
+Download:
+pyqt5 : https://www.riverbankcomputing.com/software/pyqt/download5/
+sip: https://www.riverbankcomputing.com/software/sip/download&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(env-p2.7-pyqt5)$ cd sip-4.19.3
+(env-p2.7-pyqt5)$ python configure.py &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install
+(env-p2.7-pyqt5)$ cd PyQt5_gpl-5.9
+(env-p2.7-pyqt5)$ python configure.py --qmake ~/Qt5.9.1/5.9.1/clang_64/bin/qmake &amp;amp;&amp;amp; make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ref : http://blog.csdn.net/healthy_coder/article/details/50370316&lt;/p&gt;
+
+&lt;p&gt;附：
+BUG：Could not resolve SDK Path for ‘macosx’:
+Need to install Xcode.app and start it at least one time (auto install some dependences).&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;What caused the problem for me was that I installed the XCode command line tools before installing XCode itself which apparently makes it hard for Qt to find the Mac OS SDK.&lt;/p&gt;
+
+&lt;p&gt;ref: http://www.renyiwei.com/archives/1326.html&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;python3:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip3 install PyQt5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;ref: https://pypi.python.org/pypi/PyQt5/&lt;/p&gt;</content><author><name>Ruilong Li</name></author><category term="tutorial" /><summary type="html">python2:</summary></entry><entry><title type="html">Mac下opencv2+python2.7 &amp;amp; opencv3+python3.6的配置</title><link href="http://localhost:4000/2017/09/01/Mac%E4%B8%8Bopencv2+python2.7-&-opencv3+python3.6%E7%9A%84%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="Mac下opencv2+python2.7 &amp; opencv3+python3.6的配置" /><published>2017-09-01T00:00:00+08:00</published><updated>2017-09-01T00:00:00+08:00</updated><id>http://localhost:4000/2017/09/01/Mac%E4%B8%8Bopencv2+python2.7-&amp;-opencv3+python3.6%E7%9A%84%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2017/09/01/Mac%E4%B8%8Bopencv2+python2.7-&amp;-opencv3+python3.6%E7%9A%84%E9%85%8D%E7%BD%AE.html">&lt;h2 id=&quot;1-install-ffmpeg&quot;&gt;1. Install ffmpeg&lt;/h2&gt;
+
+&lt;p&gt;为了支持VideoWriter类，首先安装ffmpeg：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install ffmpeg
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;会自动安装一些ffmpeg的依赖。亲测这样安装的ffmpeg支持以下解码方式：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[opencv2] videoWriter = cv2.VideoWriter('output.avi', cv2.cv.CV_FOURCC('M', 'J', 'P', 'G'), fps, size)  
+[opencv3] videoWriter = cv2.VideoWriter('output.avi', cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), fps, size)  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;当avi -&amp;gt; mp4时，虽然也会正确写出一个mp4文件，但是会报红一条错。当使用源码编译时，红错消失。但是flv的input无法解析。所以最后还是用brew安装的ffmpeg。
+附上ffmpeg源码编译的参考：http://trac.ffmpeg.org/wiki/CompilationGuide/macOS&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ brew install automake fdk-aac git lame libass libtool libvorbis libvpx opus sdl shtool texi2html theora wget x264 x265 xvid yasm
+
+$ git clone http://source.ffmpeg.org/git/ffmpeg.git ffmpeg
+$ cd ffmpeg
+$ ./configure  --prefix=/usr/local --enable-gpl --enable-nonfree --enable-libass \
+--enable-libfdk-aac --enable-libfreetype --enable-libmp3lame \
+--enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --enable-libopus --enable-libxvid
+$ make &amp;amp;&amp;amp; sudo make install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;2-编译opencv&quot;&gt;2. 编译opencv&lt;/h2&gt;
+&lt;p&gt;python2.7 + opencv2.4.13:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source ~/env-p2.7/bin/activate
+$ cd ~/3rd-Party/opencv/opencv-2.4.13.3
+$ mkdir release &amp;amp;&amp;amp; cd release
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D PYTHON_PACKAGES_PATH=~/env-p2.7/lib/python2.7/site-packages \
+-D PYTHON_LIBRARY=/usr/local/Cellar/python/2.7.13_1/Frameworks/Python.framework/Versions/2.7/lib/libpython2.7.dylib \
+-D CMAKE_INSTALL_PREFIX=../../opencv2-py2.7 ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;编译完看一下编译信息，ffmpeg和python部分都无误后，&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ make -j16
+$ make install (UNDO)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;由于只需要cv2.so，所以我没有install，如果install的话，会安到../../opencv2-py2.7目录下。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/env-p2.7/lib/python2.7/site-packages/
+$ cp ~/3rd-Party/opencv/opencv-2.4.13.3/release-py2.7/lib/cv2.so ./cv2.opencv-2.4.13.3.so 
+$ ln -s cv2.opencv-2.4.13.3.so cv2.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;至此大功告成。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;测试：&lt;/strong&gt; pytest.py&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import cv2
+
+input = '/Users/dalong/Downloads/1488511789.flv'
+output = input+'.avi'
+videoCapture = cv2.VideoCapture(input)  
+fps = videoCapture.get(cv2.cv.CV_CAP_PROP_FPS)  
+size = (int(videoCapture.get(cv2.cv.CV_CAP_PROP_FRAME_WIDTH)), int(videoCapture.get(cv2.cv.CV_CAP_PROP_FRAME_HEIGHT)))  
+videoWriter = cv2.VideoWriter(output, cv2.cv.CV_FOURCC('M', 'J', 'P', 'G'), fps, size)  
+success, frame = videoCapture.read()      
+while success :  
+    videoWriter.write(frame)
+    success, frame = videoCapture.read()   
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;python3.6 + opencv3.3:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ source ~/env-p3.6/bin/activate
+$ cd ~/3rd-Party/opencv/opencv-3.3.0
+$ mkdir release &amp;amp;&amp;amp; cd release
+$ cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=../../opencv3-py3.6 \
+-D PYTHON3_PACKAGES_PATH=~/env-p3.6/lib/python3.6/site-packages \
+-D PYTHON3_LIBRARY=/usr/local/Cellar/python3/3.6.2/Frameworks/Python.framework/Versions/3.6/lib/libpython3.6m.dylib \
+-D PYTHON3_INCLUDE_DIR=/usr/local/Cellar/python3/3.6.2/Frameworks/Python.framework/Versions/3.6/include/python3.6m \
+-D INSTALL_C_EXAMPLES=ON \
+-D INSTALL_PYTHON_EXAMPLES=ON \
+-D BUILD_EXAMPLES=ON \
+-D BUILD_opencv_python3=ON \
+-D PYTHON_DEFAULT_EXECUTABLE=~/env-p3.6/bin/python \
+-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules ..
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;编译完看一下编译信息，ffmpeg和python部分都无误后，&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ make -j16
+$ make install (UNDO)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;由于只需要cv2.so，所以我没有install，如果install的话，会安到../../opencv3-py3.6目录下。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cd ~/env-p3.6/lib/python3.6/site-packages
+$ cp ~/3rd-Party/opencv/opencv-3.3.0/release-py3.6/lib/python3/cv2.cpython-36m-darwin.so  ./
+$ ln -s cv2.cpython-36m-darwin.so  cv2.so
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;至此大功告成。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;测试：&lt;/strong&gt; py3test.py&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import cv2
+input = '/Users/dalong/Downloads/1488511789.flv'
+output = input+'.avi'
+videoCapture = cv2.VideoCapture(input)  
+fps = videoCapture.get(cv2.CAP_PROP_FPS)  
+size = (int(videoCapture.get(cv2.CAP_PROP_FRAME_WIDTH)), int(videoCapture.get(cv2.CAP_PROP_FRAME_HEIGHT)))  
+videoWriter = cv2.VideoWriter(output, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'), fps, size)  
+success, frame = videoCapture.read()      
+while success :  
+    videoWriter.write(frame)
+    success, frame = videoCapture.read()   
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Ref: http://www.pyimagesearch.com/2015/06/29/install-opencv-3-0-and-python-3-4-on-osx/&lt;/p&gt;</content><author><name>Ruilong Li</name></author><category term="tutorial" /><summary type="html">1. Install ffmpeg</summary></entry><entry><title type="html">Mac 新系统的配置</title><link href="http://localhost:4000/2017/08/31/Mac-%E6%96%B0%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%85%8D%E7%BD%AE.html" rel="alternate" type="text/html" title="Mac 新系统的配置" /><published>2017-08-31T00:00:00+08:00</published><updated>2017-08-31T00:00:00+08:00</updated><id>http://localhost:4000/2017/08/31/Mac-%E6%96%B0%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%85%8D%E7%BD%AE</id><content type="html" xml:base="http://localhost:4000/2017/08/31/Mac-%E6%96%B0%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%85%8D%E7%BD%AE.html">&lt;hr /&gt;
+&lt;p&gt;对于新系统，$PATH 长这样：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$echo $PATH
+&amp;gt;&amp;gt;&amp;gt; 
+/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;p&gt;原生系统中的/usr/local/bin中几乎是空的&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ls /usr/local/bin
+&amp;gt;&amp;gt;&amp;gt; 
+prl_convert
+prl_disk_tool
+prl_perf_ctl
+prlcore2dmp
+prlctl
+prlexec
+prlsrvctl
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;p&gt;安装brew之后，brew会把brew install ＊＊＊的东西都装到/usr/local/Cellar中，然后link到/usr/local/bin中。如下图。
+&lt;img src=&quot;http://static.zybuluo.com/lrl940607/a7skvdrbc6v5z4htma2f1951/Screen%20Shot%202017-08-31%20at%201.23.40%20pm.png&quot; alt=&quot;Screen Shot 2017-08-31 at 1.23.40 pm.png-221.1kB&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ls -l /usr/local/bin
+&amp;gt;&amp;gt;&amp;gt;
+...
+lrwxr-xr-x  1 dalong  admin  37 Aug 31 13:46 python2 -&amp;gt; ../Cellar/python/2.7.13_1/bin/python2
+lrwxr-xr-x  1 dalong  admin  39 Aug 31 13:46 python2.7 -&amp;gt; ../Cellar/python/2.7.13_1/bin/python2.7
+lrwxr-xr-x  1 dalong  admin  35 Aug 31 13:47 python3 -&amp;gt; ../Cellar/python3/3.6.2/bin/python3
+lrwxr-xr-x  1 dalong  admin  37 Aug 31 13:47 python3.6 -&amp;gt; ../Cellar/python3/3.6.2/bin/python3.6
+...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;以上是我用brew安装完python，python3之后的/usr/local/bin中的一部分。&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$brew install python
+$brew install python3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;p&gt;brew安装之后的python&amp;amp;python3, 在/usr/local/bin中找不到python命令，需要自己创建软链接。&lt;strong&gt;需要记住/usr/local/bin/python是自行创建的软链接，所以可以方便的在python2和python3之间切换，pip也同理&lt;/strong&gt;。如下：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ls /usr/local/bin/ | grep 'python'
+&amp;gt;&amp;gt;&amp;gt;
+python2
+python2-config
+python2.7
+python2.7-config
+python3
+python3-config
+python3.6
+python3.6-config
+python3.6m
+python3.6m-config
+pythonw2
+pythonw2.7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ls /usr/local/bin/ | grep 'pip'
+&amp;gt;&amp;gt;&amp;gt;
+pip2
+pip2.7
+pip3
+pip3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;创建软链接&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ ln -s /usr/local/bin/python2 /usr/local/bin/python
+$ ln -s /usr/local/bin/pip2 /usr/local/bin/pip
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;这样，再执行python，pip的时候，执行的就是brew下的了。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;关于virtualenv虚拟环境&lt;/strong&gt;
+推荐使用brew的python带的pip来装virtualenv。即/usr/local/bin/pip2 &amp;amp; /usr/local/bin/pip3&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ /usr/local/bin/pip install virtualenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ /usr/local/bin/pip3 install virtualenv
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;virtualenv会被安装到/usr/local/bin中。两跳命令的区别是virtualenv默认会创建python2或python3的环境。不过这个可以通过设置–python参数来控制。
+创建env-p2.7:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ virtualenv --no-site-packages --python=python2.7 env-p2.7
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;创建env-p3.6:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ virtualenv --no-site-packages --python=python3.6 env-p3.6
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Note:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;创建virtualenv虚拟环境之前，系统中必须要安装有对应版本的python，并且卸载之后当前虚拟环境就无效了。系统中可以同时存在python2和python3，通过环境变量中的系统变量path（不是用户变量）控制cmd或者系统中使用哪个版本的python，哪个版本的路径在前面就优先使用哪个版本。&lt;/li&gt;
+  &lt;li&gt;–-no-site-packages表示不包括系统全局的Python安装包，这样会更令环境更干净&lt;/li&gt;
+  &lt;li&gt;–-python=python2.7指定Python的版本未系统已经安装了的Python2.7&lt;/li&gt;
+  &lt;li&gt;没有安装python2.7，使用命令virtualenv –no-site-packages –python=python2.7 env会出现The executable python does notexist 错误&lt;/li&gt;
+  &lt;li&gt;virtualenv会把python，setuptools和pip给你安装上。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;至此，分别进入env-p2.7和env-p3.6，运行&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ pip install PyQt5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;会发现env-p3.6中能够成功安装， env-p2.7中表示找不到。因为PyQt5只支持python&amp;gt;3，所以证明成功分离环境。&lt;/p&gt;</content><author><name>Ruilong Li</name></author><category term="tutorial" /><summary type="html">对于新系统，$PATH 长这样： $echo $PATH &amp;gt;&amp;gt;&amp;gt; /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin 原生系统中的/usr/local/bin中几乎是空的 $ls /usr/local/bin &amp;gt;&amp;gt;&amp;gt; prl_convert prl_disk_tool prl_perf_ctl prlcore2dmp prlctl prlexec prlsrvctl 安装brew之后，brew会把brew install ＊＊＊的东西都装到/usr/local/Cellar中，然后link到/usr/local/bin中。如下图。 $ls -l /usr/local/bin &amp;gt;&amp;gt;&amp;gt; ... lrwxr-xr-x 1 dalong admin 37 Aug 31 13:46 python2 -&amp;gt; ../Cellar/python/2.7.13_1/bin/python2 lrwxr-xr-x 1 dalong admin 39 Aug 31 13:46 python2.7 -&amp;gt; ../Cellar/python/2.7.13_1/bin/python2.7 lrwxr-xr-x 1 dalong admin 35 Aug 31 13:47 python3 -&amp;gt; ../Cellar/python3/3.6.2/bin/python3 lrwxr-xr-x 1 dalong admin 37 Aug 31 13:47 python3.6 -&amp;gt; ../Cellar/python3/3.6.2/bin/python3.6 ... 以上是我用brew安装完python，python3之后的/usr/local/bin中的一部分。 $brew install python $brew install python3 brew安装之后的python&amp;amp;python3, 在/usr/local/bin中找不到python命令，需要自己创建软链接。需要记住/usr/local/bin/python是自行创建的软链接，所以可以方便的在python2和python3之间切换，pip也同理。如下： $ls /usr/local/bin/ | grep 'python' &amp;gt;&amp;gt;&amp;gt; python2 python2-config python2.7 python2.7-config python3 python3-config python3.6 python3.6-config python3.6m python3.6m-config pythonw2 pythonw2.7 $ls /usr/local/bin/ | grep 'pip' &amp;gt;&amp;gt;&amp;gt; pip2 pip2.7 pip3 pip3.6 创建软链接 $ ln -s /usr/local/bin/python2 /usr/local/bin/python $ ln -s /usr/local/bin/pip2 /usr/local/bin/pip 这样，再执行python，pip的时候，执行的就是brew下的了。</summary></entry><entry><title type="html">从买服务器到自搭shadowsocks科学上网 </title><link href="http://localhost:4000/2017/08/25/%E4%BB%8E%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%B0%E8%87%AA%E6%90%ADshadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html" rel="alternate" type="text/html" title="从买服务器到自搭shadowsocks科学上网 " /><published>2017-08-25T00:00:00+08:00</published><updated>2017-08-25T00:00:00+08:00</updated><id>http://localhost:4000/2017/08/25/%E4%BB%8E%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%B0%E8%87%AA%E6%90%ADshadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91</id><content type="html" xml:base="http://localhost:4000/2017/08/25/%E4%BB%8E%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%B0%E8%87%AA%E6%90%ADshadowsocks%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91.html">&lt;h1 id=&quot;1-如何拥有一个shadowsocks访问节点&quot;&gt;1. 如何拥有一个shadowsocks访问节点&lt;/h1&gt;
+&lt;p&gt;如果想要科学上网，你需要有一个境外的服务器来转发你的所有访问流量。那么这个境外的服务器如何而来呢？稳定长期的办法有两个：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;从VPN服务商那里购买账号。&lt;/li&gt;
+  &lt;li&gt;买个境外服务器，自己搭提子。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;2016年我的主要翻墙手段是第一种，当时买的是一年期的“一枝红杏VPN”。他家价格还公道，一百多，最多三人同时使用，节点也不少。&lt;/p&gt;
+
+&lt;p&gt;不过今年（2017）我想拥有一个自己的服务器，一边充当翻墙梯子，一边也可以架一些网站上去。所以索性就从RamNode买了一个服务器。节点选的LA，系统选的ubuntu 14.04。
+&lt;img src=&quot;http://static.zybuluo.com/lrl940607/2yg8m7rremk8k44w9nvakvhx/Screen%20Shot%202017-08-25%20at%2010.17.21%20am.png&quot; alt=&quot;Screen Shot 2017-08-25 at 10.17.21 am.png-56.6kB&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;［敲黑板］&lt;/strong&gt;重点来了，拥有了服务器，怎么开启服务呢？ubuntu系统几行命令就搞定啦。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;安装
+Debian / Ubuntu:
+$ apt-get install python-pip
+$ pip install shadowsocks
+
+使用
+$ ssserver -p 443 -k password -m rc4-md5
+如果要后台运行：
+$ ssserver -p 443 -k password -m rc4-md5 --user nobody -d start
+如果要停止：
+$ ssserver -d stop
+如果要检查日志：
+$ less /var/log/shadowsocks.log
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ref: https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E&lt;/p&gt;
+
+&lt;h1 id=&quot;2-本机配置&quot;&gt;2. 本机配置&lt;/h1&gt;
+
+&lt;p&gt;笔者的电脑是Mac，所以这里仅纪录Mac的配置方法。&lt;/p&gt;
+
+&lt;h3 id=&quot;21-下载shadowsocksx&quot;&gt;2.1 下载ShadowsocksX&lt;/h3&gt;
+&lt;p&gt;下载链接：https://osdn.net/projects/sfnet_shadowsocksgui/downloads/dist/ShadowsocksX-2.6.3.dmg/&lt;/p&gt;
+
+&lt;p&gt;[Windows] https://github.com/shadowsocks/shadowsocks-windows/releases/download/3.4.3/Shadowsocks-3.4.3.zip&lt;/p&gt;
+
+&lt;h3 id=&quot;22-配置shadowsocksx&quot;&gt;2.2 配置ShadowsocksX&lt;/h3&gt;
+&lt;p&gt;在ShadowsocksX的server preferences中配置server的IP，Port，密码，加密类型。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/lrl940607/ijtc35t5bi3mif1le3guxdpy/Screen%20Shot%202017-08-25%20at%2010.33.02%20am.png&quot; alt=&quot;Screen Shot 2017-08-25 at 10.33.02 am.png-61.5kB&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;配置完成后，开启ShadowsocksX，你的浏览器就可以科学上google啦！&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/lrl940607/apnmukw5gy9hql1s4n4yxlhl/Screen%20Shot%202017-08-25%20at%2010.36.41%20am.png&quot; alt=&quot;Screen Shot 2017-08-25 at 10.36.41 am.png-134.3kB&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;23-码农专属-终端中科学上网&quot;&gt;2.3 [码农专属] 终端中科学上网&lt;/h3&gt;
+&lt;p&gt;作为一个码农，终端中wget之类的命令不能翻墙是在是痛。OS X 10.10亲测Proxychains可以帮忙实现。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 安装
+
+安装 Proxychains ：使用 Terminal 运行以下命令
+$ brew install proxychains-ng
+
+查看 shadowsocks 本地端口号（端口号默认是 1080）。打开 ~/.ShadowsocksX/gfwlist.js 文件
+
+2. 设置 Proxychains 安装目录下的 proxychains.conf 文件
+
+打开 proxychains.conf 文件所在位置，在我电脑上为 /usr/local/etc/proxychains.conf
+
+打开 proxychains.conf 文件，并在 [ProxyList] 下面添加 socks5 127.0.0.1 1080（如果 [ProxyList] 下面有其他的内容，则将其删掉或注释掉），1080 即为 shadowsocks 的本地端口号。
+
+3. 使用
+在要使用代理的命令前面加上 proxychains4，即可使其命令走代理途径。比如正常情况下运行 wget www.google.com，那么让其走代理途径则是 proxychains4 wget www.google.com，其他命令同理类推。
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ref: http://www.jianshu.com/p/bee7c63c3d50&lt;/p&gt;</content><author><name>Ruilong Li</name></author><category term="tutorial" /><summary type="html">1. 如何拥有一个shadowsocks访问节点 如果想要科学上网，你需要有一个境外的服务器来转发你的所有访问流量。那么这个境外的服务器如何而来呢？稳定长期的办法有两个：</summary></entry><entry><title type="html">人像抠图任务手册v2</title><link href="http://localhost:4000/2017/07/15/%E4%BA%BA%E5%83%8F%E6%8A%A0%E5%9B%BE%E4%BB%BB%E5%8A%A1%E6%89%8B%E5%86%8Cv2.html" rel="alternate" type="text/html" title="人像抠图任务手册v2" /><published>2017-07-15T00:00:00+08:00</published><updated>2017-07-15T00:00:00+08:00</updated><id>http://localhost:4000/2017/07/15/%E4%BA%BA%E5%83%8F%E6%8A%A0%E5%9B%BE%E4%BB%BB%E5%8A%A1%E6%89%8B%E5%86%8Cv2</id><content type="html" xml:base="http://localhost:4000/2017/07/15/%E4%BA%BA%E5%83%8F%E6%8A%A0%E5%9B%BE%E4%BB%BB%E5%8A%A1%E6%89%8B%E5%86%8Cv2.html">&lt;p&gt;#抠图方法
+下载”光影魔术手”, 打开要抠的图, 在”抠图”下面选择”自动抠图”, 然后在主体上用选中笔画线, 在背景上用删除笔画线, 可以反复交互,(如图a,b,d) 差不多以后点”替换背景”, 观察抠图效果, 如果还有问题可以返回抠图, 也可以点击”前景橡皮擦”仔细擦除(图c中右侧, 擦除界面为图e), 最后另存为png格式, 注意一定要选择”png”(图c), 否则构图结果不能有效保存.&lt;/p&gt;
+
+&lt;p&gt;#抠图注意
+数据说明：本数据集采自Flickr, 每张图片中有1～5个人左右。&lt;/p&gt;
+
+&lt;p&gt;标注说明：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;分三类：只需标注出前两类，最后一类我们通过减除即可得到。
+    &lt;ul&gt;
+      &lt;li&gt;人像，身上配饰及其手持物体（考虑到手指与手中物体的不易分割，故算一类）。注意扣去人像中的漏洞，比如胳膊与身体之间的空隙。&lt;/li&gt;
+      &lt;li&gt;人前的遮挡物（除去手持物外），具体解释为空间上在主播之前的物体，主要为桌子及桌子上的部件等。实际标注中这一类在数据集中较少出现。&lt;/li&gt;
+      &lt;li&gt;其他为背景类，包括人像的椅子，身后物等。&lt;strong&gt;对于全身人像，脚下的地面也算在背景类里&lt;/strong&gt;。这类物体不需要标注&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;关于文件保存重命名
+    &lt;ul&gt;
+      &lt;li&gt;人像类抠图结果，保存时在原文件名后加‘_p’&lt;/li&gt;
+      &lt;li&gt;遮挡物类抠图结果，保存时在原文件名后加‘_t’&lt;/li&gt;
+      &lt;li&gt;例：
+  原文件名：1649697_1488185798-0.png
+  人像类结果：1649697_1488185798-0_p.png
+  遮挡类结果：1649697_1488185798-0_t.png&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;注意！为保证标注质量，特别难抠或不易分辨所属种类的图请跳过！
+ 诸如此类的图建议跳过：
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/9qvtfvtgraoxk57pxafashz3/35246591456_b83e9d9875_c.jpg&quot; alt=&quot;35246591456_b83e9d9875_c.jpg-96.8kB&quot; /&gt;
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/b46ply3a0tde5zqvvn0m1x4e/34443628964_bf1bb27609_c.jpg&quot; alt=&quot;34443628964_bf1bb27609_c.jpg-102.6kB&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;人前有巨型遮挡物导致人像的轮廓严重不全时，请跳过！（这种图通常表现为人被巨型遮挡物一分为二）
+ 诸如此类的图建议跳过：
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/xkoypxb89jeemmedk7js9k9p/34441015914_a167a7237e_c.jpg&quot; alt=&quot;34441015914_a167a7237e_c.jpg-145.2kB&quot; /&gt;
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/eo6rstb8hslee0jmet26dq0s/34492378233_93b0e8d088_c.jpg&quot; alt=&quot;34492378233_93b0e8d088_c.jpg-125.5kB&quot; /&gt;
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/gnh1v5e8n1okvfpmskjk3t1w/34754868200_63ff9ae21a_c.jpg&quot; alt=&quot;34754868200_63ff9ae21a_c.jpg-139.7kB&quot; /&gt;
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/pm4gicb4g1i8gim6839ekb55/35118199532_ae4a4281a8_c.jpg&quot; alt=&quot;35118199532_ae4a4281a8_c.jpg-173.6kB&quot; /&gt;
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/6gtrmos11aff04c95940lcwg/34475648693_2bec50836c_c.jpg&quot; alt=&quot;34475648693_2bec50836c_c.jpg-154.4kB&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;一些特殊的拍照角度，导致无法分辨前景，背景的图片，请跳过！
+ 诸如此类的图建议跳过：
+ &lt;img src=&quot;http://static.zybuluo.com/lrl940607/8ff1liv9h79ygaqleol8bbp2/35135811362_b8c4c31b4f_c.jpg&quot; alt=&quot;35135811362_b8c4c31b4f_c.jpg-133.2kB&quot; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;#抠图结果示例
+	参见‘结果示例文件夹’。我们希望你返回给我的抠图结果如示例所示。&lt;/p&gt;</content><author><name>Ruilong Li</name></author><category term="lab" /><summary type="html">#抠图方法 下载”光影魔术手”, 打开要抠的图, 在”抠图”下面选择”自动抠图”, 然后在主体上用选中笔画线, 在背景上用删除笔画线, 可以反复交互,(如图a,b,d) 差不多以后点”替换背景”, 观察抠图效果, 如果还有问题可以返回抠图, 也可以点击”前景橡皮擦”仔细擦除(图c中右侧, 擦除界面为图e), 最后另存为png格式, 注意一定要选择”png”(图c), 否则构图结果不能有效保存.</summary></entry><entry><title type="html">Flickr人像抠图任务【筛图手册】</title><link href="http://localhost:4000/2017/06/19/Flickr%E4%BA%BA%E5%83%8F%E6%8A%A0%E5%9B%BE%E4%BB%BB%E5%8A%A1-%E7%AD%9B%E5%9B%BE%E6%89%8B%E5%86%8C.html" rel="alternate" type="text/html" title="Flickr人像抠图任务【筛图手册】" /><published>2017-06-19T00:00:00+08:00</published><updated>2017-06-19T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/19/Flickr%E4%BA%BA%E5%83%8F%E6%8A%A0%E5%9B%BE%E4%BB%BB%E5%8A%A1%E3%80%90%E7%AD%9B%E5%9B%BE%E6%89%8B%E5%86%8C%E3%80%91</id><content type="html" xml:base="http://localhost:4000/2017/06/19/Flickr%E4%BA%BA%E5%83%8F%E6%8A%A0%E5%9B%BE%E4%BB%BB%E5%8A%A1-%E7%AD%9B%E5%9B%BE%E6%89%8B%E5%86%8C.html">&lt;h2 id=&quot;1-筛图目的人像抠图&quot;&gt;1. 筛图目的：人像抠图&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/lrl940607/j3qsiecl0oqihq6zzv2vhwev/Screen%20Shot%202017-03-07%20at%208.45.57%20AM.png&quot; alt=&quot;Screen Shot 2017-03-07 at 8.45.57 AM.png-216.3kB&quot; /&gt;
+&lt;img src=&quot;http://static.zybuluo.com/lrl940607/1mxb70ge3aie1uts272pkkh9/seg_exp1.png&quot; alt=&quot;seg_exp1.png-179.1kB&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;2-筛图要求&quot;&gt;2. 筛图要求：&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;真实人物人像&lt;/strong&gt;，不要画像、动漫、游戏模型等等。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;色彩对比明显，易于抠图的高清图&lt;/strong&gt;，有的图里面的人物很小，这种不要。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;人物数量不宜超过5个&lt;/strong&gt;，主要是为了保证人的大小不宜过小。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;人物为主要物体。且背景无人物&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;色彩过于单一（比如黑白图）不要&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Ruilong Li</name></author><category term="lab" /><summary type="html">1. 筛图目的：人像抠图</summary></entry><entry><title type="html">三维点集中最大空心球程序说明文档</title><link href="http://localhost:4000/2017/06/05/%E4%B8%89%E7%BB%B4%E7%82%B9%E9%9B%86%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%A9%BA%E5%BF%83%E7%90%83%E7%A8%8B%E5%BA%8F%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html" rel="alternate" type="text/html" title="三维点集中最大空心球程序说明文档" /><published>2017-06-05T00:00:00+08:00</published><updated>2017-06-05T00:00:00+08:00</updated><id>http://localhost:4000/2017/06/05/%E4%B8%89%E7%BB%B4%E7%82%B9%E9%9B%86%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%A9%BA%E5%BF%83%E7%90%83%E7%A8%8B%E5%BA%8F%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3</id><content type="html" xml:base="http://localhost:4000/2017/06/05/%E4%B8%89%E7%BB%B4%E7%82%B9%E9%9B%86%E4%B8%AD%E6%9C%80%E5%A4%A7%E7%A9%BA%E5%BF%83%E7%90%83%E7%A8%8B%E5%BA%8F%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3.html">&lt;h3 id=&quot;一-算法流程简介&quot;&gt;一. 算法流程简介&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. 对三维点集进行Delaunay三角剖分。
+2. 利用Delaunay三角剖分结果与QuickHull凸包求取算法计算三维点集的Voronoi图。
+3. 对Voronoi图中的Voronoi Vertics遍历，找到最大空心球。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;二-配置环境及依赖&quot;&gt;二. 配置环境及依赖&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Qt 
+OpenGL
+GLUT
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;三-测试环境&quot;&gt;三. 测试环境&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;MacOS 10.0
+Ubuntu 14.04
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;四-主要文件与函数&quot;&gt;四. 主要文件与函数&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Delaunay.h 
+    - 实现了三维点集的Delaunay三角剖分。
+    - 输入为三维点集，输出为剖分后的四面体集合。
+quickhull.h
+    - 实现了三维点集QuickHull求取凸包算法。
+    - 输入为三维点集，输出为三角面片集合。
+half_edge.h  point_sets.h  
+    - 实现了三维Delaunay到三维Voronoi图的转换。
+    - 输出为Voronoi晶包（三角面片集合）的集合。
+glwidget.h cube.h event.h
+    - 实现了QT+OpenGL界面的绘制。包括Event类辅助的动态绘制Delaunay三角剖分过程。
+Vector3.h Line.h Triangle.h Tetrahedron.h
+    - 基础类及其功能的实现：点、线、三角面片、四面体
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;五-展示相关功能键&quot;&gt;五. 展示相关功能键&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;F1：显示三维点集
+F2：显示Delaunay剖分结果
+F3：显示Voronoi Vertics
+F4：显示三维点集的凸包（QuickHull）
+F5：显示Voronoi晶包及最大球
+F6：开始动态展示Delaunay剖分过程
+    - Q：下一步
+    - W：上一步
+注：F1-F6多次按下表示在相应功能下切换显示/不显示。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;六-视角相关功能键&quot;&gt;六. 视角相关功能键&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;鼠标左右键： 拖动视角
+键盘上下键： 视角的放大与缩小
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Ruilong Li</name></author><category term="course" /><summary type="html">一. 算法流程简介 1. 对三维点集进行Delaunay三角剖分。 2. 利用Delaunay三角剖分结果与QuickHull凸包求取算法计算三维点集的Voronoi图。 3. 对Voronoi图中的Voronoi Vertics遍历，找到最大空心球。 二. 配置环境及依赖 Qt OpenGL GLUT 三. 测试环境 MacOS 10.0 Ubuntu 14.04</summary></entry><entry><title type="html">CCF 视觉、图形学、人工智能 顶级会议</title><link href="http://localhost:4000/2017/04/25/CCF-%E8%A7%86%E8%A7%89-%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E9%A1%B6%E7%BA%A7%E4%BC%9A%E8%AE%AE.html" rel="alternate" type="text/html" title="CCF 视觉、图形学、人工智能 顶级会议" /><published>2017-04-25T00:00:00+08:00</published><updated>2017-04-25T00:00:00+08:00</updated><id>http://localhost:4000/2017/04/25/CCF-%E8%A7%86%E8%A7%89%E3%80%81%E5%9B%BE%E5%BD%A2%E5%AD%A6%E3%80%81%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E9%A1%B6%E7%BA%A7%E4%BC%9A%E8%AE%AE</id><content type="html" xml:base="http://localhost:4000/2017/04/25/CCF-%E8%A7%86%E8%A7%89-%E5%9B%BE%E5%BD%A2%E5%AD%A6-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD-%E9%A1%B6%E7%BA%A7%E4%BC%9A%E8%AE%AE.html">&lt;p&gt;http://www.cnblogs.com/guolei/p/3576366.html&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;序号|DDL| 会议简称|会议全称|出版社|网址 |
+—-|—|———|——–|——|—- |
+1 |4-17 4-20| ACM MM | ACM International Conference on Multimedia | ACM | http://www.acmmm12.org/
+2 |1-17| SIGGRAPH | ACM SIGGRAPH Annual Conference | ACM | http://www.siggraph.org/
+2.5 |2-16 2-17| SIGGRAPH ASIA | | ACM | 
+3 |3-21 3-31| IEEE VIS | IEEE Visualization Conference | IEEE | http://www.ieeevis.org/
+1 |9-9 9-14| AAAI | AAAI Conference on Artificial Intelligence | AAAI | http://www.aaai.org
+2 |11-15 11-22| CVPR | IEEE Conference on Computer Vision and Pattern Recognition | IEEE | http://www.pamitc.org/cvpr13/
+3 |3-10 regi 3-17 3-27| ICCV | International Conference on Computer Vision | IEEE | http://www.iccv2013.org/
+4 |2-24| ICML | International Conference on Machine Learning | ACM | http://icml.cc/2013/
+5 |2-19| IJCAI | International Joint Conference on Artificial Intelligence | Morgan Kaufmann | http://www.ijcai.org
+6 |5-1 ~ 5-19| NIPS | Annual Conference on Neural Information Processing Systems | MIT Press | http://dblp.uni-trier.de/db/conf/nips/
+7 |2-6| ACL | Annual Meeting of the Association for Computational Linguistics | ACL | http://dblp.uni-trier.de/db/conf/acl/&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;序号&lt;/th&gt;
+      &lt;th&gt;期刊简称&lt;/th&gt;
+      &lt;th&gt;期刊全称&lt;/th&gt;
+      &lt;th&gt;出版社&lt;/th&gt;
+      &lt;th&gt;网址&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;TOG&lt;/td&gt;
+      &lt;td&gt;ACM Transactions on Graphics&lt;/td&gt;
+      &lt;td&gt;ACM&lt;/td&gt;
+      &lt;td&gt;http://dblp.uni-trier.de/db/journals/tog/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;TIP&lt;/td&gt;
+      &lt;td&gt;IEEE Transactions on Image Processing&lt;/td&gt;
+      &lt;td&gt;IEEE&lt;/td&gt;
+      &lt;td&gt;http://dblp.uni-trier.de/db/journals/tip/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;TVCG&lt;/td&gt;
+      &lt;td&gt;IEEE Transactions on Visualization and Computer Graphics&lt;/td&gt;
+      &lt;td&gt;IEEE&lt;/td&gt;
+      &lt;td&gt;http://dblp.uni-trier.de/db/journals/tvcg/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;AI&lt;/td&gt;
+      &lt;td&gt;Artificial Intelligence&lt;/td&gt;
+      &lt;td&gt;Elsevier&lt;/td&gt;
+      &lt;td&gt;http://dblp.uni-trier.de/db/journals/ai/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;TPAMI&lt;/td&gt;
+      &lt;td&gt;IEEE Trans on Pattern Analysis and Machine Intelligence&lt;/td&gt;
+      &lt;td&gt;IEEE&lt;/td&gt;
+      &lt;td&gt;http://dblp.uni-trier.de/db/journals/pami/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;IJCV&lt;/td&gt;
+      &lt;td&gt;International Journal of Computer Vision&lt;/td&gt;
+      &lt;td&gt;Springer&lt;/td&gt;
+      &lt;td&gt;http://dblp.uni-trier.de/db/journals/ijcv/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;JMLR&lt;/td&gt;
+      &lt;td&gt;Journal of Machine Learning Research&lt;/td&gt;
+      &lt;td&gt;MIT Press&lt;/td&gt;
+      &lt;td&gt;http://dblp.uni-trier.de/db/journals/jmlr/&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Ruilong Li</name></author><category term="lab" /><summary type="html">http://www.cnblogs.com/guolei/p/3576366.html</summary></entry><entry><title type="html">选题报告–微信聊天记录数据可视化</title><link href="http://localhost:4000/2017/04/16/%E9%80%89%E9%A2%98%E6%8A%A5%E5%91%8A-%E5%BE%AE%E4%BF%A1%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html" rel="alternate" type="text/html" title="选题报告--微信聊天记录数据可视化" /><published>2017-04-16T00:00:00+08:00</published><updated>2017-04-16T00:00:00+08:00</updated><id>http://localhost:4000/2017/04/16/%E9%80%89%E9%A2%98%E6%8A%A5%E5%91%8A--%E5%BE%AE%E4%BF%A1%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96</id><content type="html" xml:base="http://localhost:4000/2017/04/16/%E9%80%89%E9%A2%98%E6%8A%A5%E5%91%8A-%E5%BE%AE%E4%BF%A1%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html">&lt;h2 id=&quot;选题背景&quot;&gt;选题背景&lt;/h2&gt;
+&lt;p&gt;近两年，每到年末，就会有很多公司为用户推出“年度总结报告”，比如曾风靡一时的支付宝年账单。这种年度总结报告之所以可以受到用户的追捧，不仅因为其可以全面反映此用户的综合使用情况，还能够展示出一些用户在使用过程中不曾留意的细节记录。比如支付宝中展示的“吃了最贵的一餐”，“打了最远的一次车”，“今年网购最剁手的一笔”等等。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://static.zybuluo.com/lrl940607/4y3gm8vm8l15g6xx153tubaa/timg-6.jpeg&quot; alt=&quot;timg-6.jpeg-48.9kB&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;这种年账单的可视化形式已经被广泛的应用到了各个领域，比如游戏行业，金融行业等等。但是目前对于人们日常中最频繁的行为–网络聊天，在我所知的范围内还没有一家公司推出比较好年账单总结模式。所以我的选题为针对微信的聊天记录，为用户动态地可视化一段时间内的行为信息。大至人际关系网的演变，小至特定聊天对象的聊天内容统计。&lt;/p&gt;
+
+&lt;h2 id=&quot;可视化目标&quot;&gt;可视化目标&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用户在使用微信过程中的人际关系网络随时间的变化&lt;/li&gt;
+  &lt;li&gt;用户与特定聊天对象的聊天内容可视化，包括
+    &lt;ul&gt;
+      &lt;li&gt;主要聊天内容的提取与展示&lt;/li&gt;
+      &lt;li&gt;聊天频繁程度随时间演变的可视化&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;用户使用微信聊天的频率与常用时间段的统计与展示&lt;/li&gt;
+  &lt;li&gt;XX之最的展示，包括
+    &lt;ul&gt;
+      &lt;li&gt;时间最长的一次聊天&lt;/li&gt;
+      &lt;li&gt;互动最频繁的联系人&lt;/li&gt;
+      &lt;li&gt;最热情的朋友与最冷漠的朋友&lt;/li&gt;
+      &lt;li&gt;最长多久没有使用微信&lt;/li&gt;
+      &lt;li&gt;等等&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;数据来源&quot;&gt;数据来源&lt;/h2&gt;
+
+&lt;p&gt;因为我们是对某个用户在某段时间内的聊天记录进行可视化，所以我们需要的数据是用户在某时间段内的全部微信聊天记录。而且并不需要很多份用户数据，因为日常微信的聊天行为已经足够多，一个用户就会产生大量的聊天记录数据。所以初步打算从身边的同学、朋友那里，在获得了许可之后，将聊天记录拷贝出来作为本项目的可视化数据。&lt;/p&gt;
+
+&lt;h2 id=&quot;设计方案&quot;&gt;设计方案&lt;/h2&gt;
+&lt;h4 id=&quot;数据方面&quot;&gt;数据方面&lt;/h4&gt;
+&lt;p&gt;经初步调研，对于微信android端，可以使用Root Explorer文件管理器导出聊天记录数据库文件。由于数据库是加密的，还需要获取手机的IMEI和UNI码对数据库进行解密。之后可以得到完整的SQL聊天数据。&lt;/p&gt;
+
+&lt;h4 id=&quot;统计方面&quot;&gt;统计方面&lt;/h4&gt;
+&lt;p&gt;拟使用一些分词工具（比如jieba分词）对聊天内容进行统计和分析。
+利用聊天信息自带的时间戳，可以统计各种聊天行为在时域上的演化情况。
+通过寻找极值的方式可以找到XX之最的一些信息。&lt;/p&gt;
+
+&lt;h4 id=&quot;可视化方面&quot;&gt;可视化方面&lt;/h4&gt;
+&lt;p&gt;拟使用Echarts工具包，以网页端的形式进行数据的图表展示
+拟通过网页内嵌视频的方式来展示一些动态变化的数据。
+拟通过词云表示的方式来展示与某用户的详细的聊天信息。&lt;/p&gt;
+
+&lt;h2 id=&quot;项目分工&quot;&gt;项目分工&lt;/h2&gt;
+&lt;p&gt;默认以3人队计：一人进行数据获取与信息统计。两人进行可视化框架的搭建。&lt;/p&gt;</content><author><name>Ruilong Li</name></author><category term="course" /><summary type="html">选题背景 近两年，每到年末，就会有很多公司为用户推出“年度总结报告”，比如曾风靡一时的支付宝年账单。这种年度总结报告之所以可以受到用户的追捧，不仅因为其可以全面反映此用户的综合使用情况，还能够展示出一些用户在使用过程中不曾留意的细节记录。比如支付宝中展示的“吃了最贵的一餐”，“打了最远的一次车”，“今年网购最剁手的一笔”等等。</summary></entry></feed>
