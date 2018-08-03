@@ -29,9 +29,9 @@ disqus:
   shortname: suyan-zh
 
 # google analytics config
-ga:
-  id: UA-54767140-1
-  url: yansu.org
+# ga:
+#   id: UA-54767140-1
+#   url: yansu.org
 
 # Build settings
 permalink: /:year/:month/:day/:title.html
