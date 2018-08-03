@@ -4,7 +4,7 @@ email: li-rl16@mails.tsinghua.edu.cn
 description: > # this means to ignore newlines until "baseurl:"
   This is Ruilong Li's homepage.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://ruilong.org # the base hostname & protocol for your site
+url: http://dalong.org/ # the base hostname & protocol for your site
 rss_url: /pages/feed.xml
 author: Ruilong Li
 
